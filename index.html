@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>句子练习系统</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-title">句子练习系统</div>
+    <div class="top-subtitle">点击拼句 · 填空 · 手动输入 · 听写</div>
+    <div id="progressBarWrap">
+      <div id="progressBar"></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="modeTabs" class="mode-tabs">
+      <button data-mode="click" class="mode-tab active">点击拼句</button>
+      <button data-mode="drag" class="mode-tab">拖拽拼句</button>
+      <button data-mode="fill" class="mode-tab">填空</button>
+      <button data-mode="input" class="mode-tab">整句输入</button>
+      <button data-mode="listen" class="mode-tab">听写</button>
+    </div>
+
+    <section class="card">
+      <div class="cn-text" id="cnText">加载中...</div>
+      <div id="answerBox" class="answer-box"></div>
+      <div id="modeArea" class="mode-area"></div>
+      <div id="feedback" class="feedback"></div>
+
+      <div class="btn-row">
+        <button id="btnSubmit" class="btn primary">提交</button>
+        <button id="btnNext" class="btn">下一题</button>
+        <button id="btnSpeak" class="btn">🔊 朗读</button>
+      </div>
+
+      <div id="stats" class="stats"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>提示：点击上方标签可以切换练习模式；所有数据保存在本地浏览器。</div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>
